@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultimate Rock Paper Scissors</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Player Name Input -->
+    <div class="player-name-container">
+      <input type="text" id="playerName" placeholder="Enter your name">
+      <button id="saveName"><i class="fas fa-save"></i> Save</button>
+    </div>
 
+    <h1>🎮 Ultimate Rock Paper Scissors 🎮</h1>
+
+    <!-- Score Board -->
+    <div class="score-board">
+      <div class="badge" id="user-label">
+        <span id="player-name">Player</span>: <span id="user-score">0</span>
+      </div>
+      <div class="badge" id="comp-label">Computer: <span id="comp-score">0</span></div>
+    </div>
+
+    <!-- Total Score Display -->
+    <div class="total-score">
+      <p>Total Score: <span id="total-user-score">0</span> - <span id="total-comp-score">0</span></p>
+    </div>
+
+    <!-- Game Choices -->
+    <div class="choices">
+      <button class="choice-btn" data-choice="rock">
+        <img src="https://img.icons8.com/fluency/96/rock.png" alt="Rock">
+      </button>
+      <button class="choice-btn" data-choice="paper">
+        <img src="https://img.icons8.com/fluency/96/paper.png" alt="Paper">
+      </button>
+      <button class="choice-btn" data-choice="scissors">
+        <img id="scissors-icon" src="https://img.icons8.com/fluency/96/scissors.png" alt="Scissors">
+      </button>
+    </div>
+
+    <!-- Result Display -->
+    <div id="result"></div>
+
+    <!-- Game History -->
+    <div class="history">
+      <h3>Game History <i class="fas fa-history"></i></h3>
+      <ul id="history-list"></ul>
+    </div>
+
+    <!-- Reset Button -->
+    <button id="reset"><i class="fas fa-redo"></i> Reset Game</button>
+  </div>
+
+  <!-- Sound Effects -->
+  <audio id="win-sound" src="https://assets.mixkit.co/active_storage/sfx/257/257-preview.mp3"></audio>
+  <audio id="lose-sound" src="https://assets.mixkit.co/active_storage/sfx/259/259-preview.mp3"></audio>
+  <audio id="draw-sound" src="https://assets.mixkit.co/active_storage/sfx/256/256-preview.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
